@@ -1,0 +1,111 @@
+@import '../../app.scss';
+
+.contact {
+  height: 100%;
+  max-width: 1300px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+
+  @include mobile{
+    width: 100%;
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .textContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    @include mobile{
+     gap: 0px;
+     text-align: center;
+     align-items: center;
+     margin-top: 100px;
+    }
+
+    h1 {
+      font-size: 100px;
+      line-height: 88px;
+
+      @include mobile{
+        font-size: 36px;
+       }
+
+    }
+
+    span {
+      font-weight: 300;
+    }
+  }
+
+  .formContainer {
+    flex: 1;
+    position: relative;
+
+    @include mobile{
+      padding-top: 0px;
+      width: 100%;
+     }
+
+    .phoneSvg {
+      stroke: orange;
+      position: absolute;
+      margin: auto;
+      z-index: -1;
+
+      svg{
+        @include mobile{
+          transition: none !important;
+          display: none;
+        }
+      }
+
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding-top: 0;
+      margin-top: 0;
+
+      @include mobile{
+        transition: none !important;
+      }
+
+      input,
+      textarea {
+        padding: 20px;
+        background-color: transparent;
+        border: 1px solid white;
+        color: white;
+        border-radius: 5px;
+
+        @include mobile{
+          padding: 10px;
+         }
+
+      }
+
+      button {
+        padding: 20px;
+        border: none;
+        background-color: orange;
+        cursor: pointer;
+        font-weight: 500;
+        border-radius: 5px;
+
+        @include mobile{
+          padding: 10px;
+         }
+
+      }
+    }
+  }
+}
